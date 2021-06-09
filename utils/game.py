@@ -19,7 +19,7 @@ class Board:
         new_deck = Deck()
         new_deck.fill_deck()
         new_deck.shuffle()
-        for item in new_deck.cards:
-            print(item.value + item.icon)
-        #new_deck.distribute(self.players)
+        #or item in new_deck.cards:
+            #print(item.value + item.icon)
+        new_deck.distribute(self.players)
 

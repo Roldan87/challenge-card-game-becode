@@ -56,11 +56,11 @@ class Deck:
     
     def distribute(self, players: List[Player]):
         # that will take a list of Player as parameter and will distribute the cards evenly between all the players
-        dist_deck = self.cards
         player_index = 0
         card_index = 0
-        for item in range(52):
-            players[player_index].cards.append(dist_deck[card_index])
-            player_index += 1
+        for item in players:
+            players[player_index].cards.append(self.cards[card_index])
             card_index += 1
+            if len(players[player_index].cards) == self.cards / (len(players)):
+                player_index += 1
         return players
